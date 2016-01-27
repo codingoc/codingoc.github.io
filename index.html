@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>依天照海</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="C/C++|Objective-C|Python|OS X|Linux">
 <meta property="og:type" content="website">
 <meta property="og:title" content="依天照海">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="依天照海">
-<meta property="og:description">
+<meta property="og:description" content="C/C++|Objective-C|Python|OS X|Linux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="依天照海">
-<meta name="twitter:description">
+<meta name="twitter:description" content="C/C++|Objective-C|Python|OS X|Linux">
   
     <link rel="alternative" href="/atom.xml" title="依天照海" type="application/atom+xml">
   
@@ -40,6 +40,8 @@
 		  <h1 class="header-author"><a href="/">依天照海</a></h1>
 		</hgroup>
 
+		
+		<p class="header-subtitle">码农一名，只看不说，默默的做</p>
 		
 
 		
@@ -101,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
+						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/hexo安装/" style="font-size: 10px;">hexo安装</a>
 					</div>
 				</section>
 				
@@ -137,6 +139,8 @@
 			<hgroup>
 			  <h1 class="header-author">依天照海</h1>
 			</hgroup>
+			
+			<p class="header-subtitle">码农一名，只看不说，默默的做</p>
 			
 			<nav class="header-menu">
 				<ul>
@@ -187,39 +191,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##MaHua是什么?<br>一个在线编辑markdown文档的编辑器</p>
-<p>向Mac下优秀的markdown编辑器mou致敬</p>
-<p>##MaHua有哪些功能？</p>
+        <h2 id="u5199_u5728_u6700_u524D_u9762"><a href="#u5199_u5728_u6700_u524D_u9762" class="headerlink" title="写在最前面"></a>写在最前面</h2><p>致谢 <a href="http://litten.github.io/">litten</a> 如此优雅的主题，你们这样懂得欣赏美，能够创作美的coder是我们这种码农的最好基友or丽友<br>参考：<br><a href="http://www.cnblogs.com/zhcncn/p/4097881.html">http://www.cnblogs.com/zhcncn/p/4097881.html</a><br><a href="http://www.zipperary.com/categories/hexo/">http://www.zipperary.com/categories/hexo/</a></p>
+<h2 id="hexo_u662F_u4EC0_u4E48_3F"><a href="#hexo_u662F_u4EC0_u4E48_3F" class="headerlink" title="hexo是什么?"></a>hexo是什么?</h2><p>都到这里来了，不用说吧</p>
+<h2 id="hexo_u6709_u54EA_u4E9B_u529F_u80FD_uFF1F"><a href="#hexo_u6709_u54EA_u4E9B_u529F_u80FD_uFF1F" class="headerlink" title="hexo有哪些功能？"></a>hexo有哪些功能？</h2><ul>
+<li>让程序员码字</li>
+<li>让程序员有逼格的码字</li>
+</ul>
+<h2 id="u5982_u4F55_u5F00_u59CB_uFF1F"><a href="#u5982_u4F55_u5F00_u59CB_uFF1F" class="headerlink" title="如何开始？"></a>如何开始？</h2><p>分2个大步骤，这样清晰明了，以下仅限<strong>Windows</strong>，*OS X， Linux*下安装大同小易，比在Windows下更顺手</p>
 <ul>
-<li>方便的<code>导入导出</code>功能<ul>
-<li>直接把一个markdown的文本文件拖放到当前这个页面就可以了</li>
-<li>导出为一个html格式的文件，样式一点也不会丢失</li>
+<li><p>第一步：本地搭建</p>
+<ul>
+<li>安装 <a href="http://git-for-windows.github.io/">git for Windows</a></li>
+<li>安装 <a href="http://nodejs.org/download">Node</a></li>
+<li>在目标位置新建一个目录，用于存放blog的相关文件，例如我在D盘下新建了hexo目录，以下以<code>D:\hexo</code>目录作为示例</li>
+<li><p>打开D:\hexo目录，在此目录下右键<strong>Git Bash</strong>，在命令行窗口中执行以下命令：</p>
+<ul>
+<li><code>npm install -g hexo</code></li>
+<li><code>hexo init</code></li>
+<li>此时hexo就在当前目录（D:\hexo）下建立了相关文件</li>
+<li>继续执行 <code>npm install</code> 安装modules</li>
+<li>至此如果没有出现错误，大功告成，本地安装已完毕</li>
+<li>在命令行中继续执行 <code>hexo server</code> 回显如下即已启动本地hexo服务：<blockquote>
+<p>$ hexo server<br>[info] Hexo is running at <a href="http://localhost:4000/">http://localhost:4000/</a>. Press Ctrl+C to stop.</p>
+</blockquote>
+</li>
+<li>在浏览器中输入 <a href="http://localhost:4000/">http://localhost:4000/</a> 即可访问  </li>
+<li>配置hexo：hexo配置文件分2个，一个是整站配置文件<strong>D:\hexo\_config.yml</strong>，另一个是主题配置文件，位于<strong>D:\hexo\themes\[相应主题目录]\_config.yml</strong>，具体的配置单项参考此文 <a href="http://www.zipperary.com/2013/05/29/hexo-guide-3/">hexo系列教程之配置文件</a>，配置修改完成之后，可以重新运行<code>hexo server -g</code>后刷新浏览器查看一下效果</li>
 </ul>
 </li>
-<li>编辑和预览<code>同步滚动</code>，所见即所得（右上角设置）</li>
-<li><code>VIM快捷键</code>支持，方便vim党们快速的操作 （右上角设置）</li>
-<li>强大的<code>自定义CSS</code>功能，方便定制自己的展示</li>
-<li>有数量也有质量的<code>主题</code>,编辑器和预览区域</li>
-<li>完美兼容<code>Github</code>的markdown语法</li>
-<li>预览区域<code>代码高亮</code></li>
-<li>所有选项自动记忆</li>
-</ul>
-<p>##有问题反馈<br>在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流</p>
-<ul>
-<li>邮件(dev.hubo#gmail.com, 把#换成@)</li>
-<li>QQ: 287759234</li>
-<li>weibo: <a href="http://weibo.com/ihubo" target="_blank" rel="external">@草依山</a></li>
-<li>twitter: <a href="http://twitter.com/ihubo" target="_blank" rel="external">@ihubo</a></li>
-</ul>
-<p>##捐助开发者<br>在兴趣的驱动下,写一个<code>免费</code>的东西，有欣喜，也还有汗水，希望你喜欢我的作品，同时也能支持一下。<br>当然，有钱捧个钱场（右上角的爱心标志，支持支付宝和PayPal捐助），没钱捧个人场，谢谢各位。</p>
-<p>##感激<br>感谢以下的项目,排名不分先后</p>
-<ul>
-<li><a href="http://mouapp.com/" target="_blank" rel="external">mou</a> </li>
-<li><a href="http://ace.ajax.org/" target="_blank" rel="external">ace</a></li>
-<li><a href="http://jquery.com" target="_blank" rel="external">jquery</a></li>
-</ul>
-<p>##关于作者</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ihubo = &#123;</span><br><span class="line">  nickName  : <span class="string">"草依山"</span>,</span><br><span class="line">  site : <span class="string">"http://jser.me"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>hexo 基本命令介绍</p>
+<blockquote>
+<p><code>hexo new &quot;postName&quot;</code> #新建文章<br><code>hexo new page &quot;pageName&quot;</code> #新建页面<br><code>hexo generate</code> #生成静态页面至public目录<br><code>hexo server</code> #开启预览访问端口（默认端口4000，’ctrl + c’关闭server）<br><code>hexo deploy</code> #将.deploy目录部署到GitHub<br><code>hexo deploy -g</code> #复合命令，相当于<code>hexo generate; hexo deploy;</code>下同<br><code>hexo server -g</code> #复合命令，相当于<code>hexo generate; hexo server;</code><br><code>hexo n == hexo new</code> #简写，下同<br><code>hexo g == hexo generate</code><br><code>hexo s == hexo server</code><br><code>hexo d == hexo deploy</code></p>
       
     </div>
     
@@ -227,11 +229,19 @@
       
       
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo安装/">hexo安装</a></li></ul>
 	</div>
 
       
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/hexo/">hexo</a>
+	</div>
 
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/01/27/hexo/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
